@@ -42,7 +42,6 @@ func writeJSONResponse(w http.ResponseWriter, data interface{}) error {
 	jsonResponse, err := json.MarshalIndent(data, "", " ")
 
 	if err != nil {
-		http.Error(w, "Internal server error", http.StatusInternalServerError)
 		return err
 	}
 
